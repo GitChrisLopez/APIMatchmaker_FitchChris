@@ -1,0 +1,4 @@
+com\itson\apimatchmaker_fitchchris\JakartaRestConfiguration.class
+api\ProfilesResource.class
+com\itson\apimatchmaker_fitchchris\resources\JakartaEE10Resource.class
+dtos\ProfileDTO.class
