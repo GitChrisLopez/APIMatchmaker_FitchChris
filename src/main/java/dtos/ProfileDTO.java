@@ -4,6 +4,7 @@
  */
 package dtos;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.Calendar;
 
 /**
@@ -11,10 +12,12 @@ import java.util.Calendar;
  * @author chris
  */
 public class ProfileDTO {
+
     String nombre;
     String apellidoPaterno;
     String apellidoMaterno;
-    Calendar fechaNacimiento;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Calendar fechaNacimiento;
     String foto;
     String email;
     String genero;
@@ -23,8 +26,8 @@ public class ProfileDTO {
     String celular;
     String direccion;
     int edad;
-    
-    public ProfileDTO(){
+
+    public ProfileDTO() {
     }
 
     public ProfileDTO(String nombre, String apellidoPaterno, String apellidoMaterno, Calendar fechaNacimiento, String foto, String email, String genero, String pais, String telefono, String celular, String direccion, int edad) {
@@ -48,8 +51,6 @@ public class ProfileDTO {
         this.apellidoMaterno = apellidoMaterno;
         this.pais = pais;
     }
-    
-    
 
     public String getNombre() {
         return nombre;
@@ -146,6 +147,5 @@ public class ProfileDTO {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    
-    
+
 }
